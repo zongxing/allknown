@@ -6,7 +6,9 @@ import java.net.Socket;
 import java.util.Scanner;
 
 import com.mashensoft.service.IIPService;
+import com.mashensoft.service.IIdcardService;
 import com.mashensoft.service.IPServiceImpl;
+import com.mashensoft.service.IdcardServiceImpl;
 
 public class AllKnowMain {
 	public static void main(String[] args) {
@@ -51,6 +53,10 @@ public class AllKnowMain {
 		case "1":
 			IIPService ipService = new IPServiceImpl(scanner,pw);
 			ipService.mainControl(pw);
+			break;
+		case "2":
+			IIdcardService idcardService = new IdcardServiceImpl(scanner,pw);
+			idcardService.mainControl(pw);
 			break;
 
 		default:
