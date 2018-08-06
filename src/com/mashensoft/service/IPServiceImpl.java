@@ -76,20 +76,24 @@ public class IPServiceImpl implements IIPService {
 	}
 	@Override
 	public void mainControl(PrintWriter pw) {
-		pw.println("请输入IP地址：");
-		pw.println("回到主菜单，请按q：");
+		pw.println("请输入IP地址：\r\n");
+		pw.println("回到主菜单，请按q：\r\n");
+		pw.flush();
 		String ip = scanner.nextLine();
 		if(ip.equalsIgnoreCase("q")){
-			pw.println("退出到主菜单：");
+			pw.println("退出到主菜单：\r\n");
+			pw.flush();
 			AllKnowMain.printMainMenu(pw);
+			return;
 		}
 		boolean sign = checkIPIsLegal(ip);
 		if(!sign){
-			pw.println("ip不合法，请重新输入IP：");
+			pw.println("ip不合法，请重新输入IP：\r\n");
+			pw.flush();
 			mainControl(pw);
 		}
 		String spName = getSpName(ip);
-		pw.println(spName);
+		pw.println(spName+"\r\n");
 		mainControl(pw);
 	}
 

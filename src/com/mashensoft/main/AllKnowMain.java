@@ -32,12 +32,13 @@ public class AllKnowMain {
 	}
 
 	public static void printMainMenu(PrintWriter pw) {
-		String content = "码神百事通主菜单：\n";
-		content+="1：查询IP地址\n";
-		content+="2：查询身份证号：\n";
-		content+="3：查询电影下载地址：\n";
-		content+="4：查询天气：\n";
+		String content = "码神百事通主菜单：\r\n";
+		content+="1：查询IP地址\r\n";
+		content+="2：查询身份证号：\r\n";
+		content+="3：查询电影下载地址：\r\n";
+		content+="4：查询天气：\r\n";
 		pw.println(content);
+		pw.flush();
 //		pw.println("码神百事通主菜单：");
 //		pw.println("1：查询IP地址");
 //		pw.println("2：查询身份证号：");
